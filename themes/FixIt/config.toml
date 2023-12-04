@@ -46,7 +46,7 @@
   description = ""
   keywords = ["Hugo", "FixIt"]
   defaultTheme = "dark"
-  gitRepo = "https://github.com/Yhj123/wiki_blog"
+  gitRepo = "https://github.com/Yhj123/wiki_blog/blob/master/content/"
   fingerprint = ""
   dateFormat = "2006-01-02"
   images = []
