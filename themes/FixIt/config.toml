@@ -71,9 +71,9 @@
       dark = "#252627"
 
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia", "fuse"]
-    type = "lunr"
+    type = "algolia"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
@@ -87,9 +87,9 @@
     # FixIt 0.2.4 | NEW whether to use the absolute URL based on the baseURL in search index
     absoluteURL = false
     [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+      index = "yhjedward"
+      appID = "BA11HJWN6Y"
+      searchKey = "adfbb624ce386a7ae198d4ee999d8e63"
     [params.search.fuse]
       # FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
       isCaseSensitive = false
@@ -405,7 +405,7 @@
       
     # FixIt 0.2.14 | NEW Post edit
     [params.page.edit]
-      enable = false
+      enable = true
       # FixIt 0.2.15 | CHANGED Link for fork & edit
       # url = "/edit/branch-name/subdirectory-name" # base on `params.gitRepo`
       # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url

@@ -1,7 +1,7 @@
 ---
-title: 整流电路
+title: Electron环境搭建
 subtitle:
-date: 2023-11-18T11:22:25+08:00
+date: 2023-12-01T15:53:55+08:00
 draft: false
 author:
   name:
@@ -14,12 +14,13 @@ license:
 comment: false
 weight: 0
 tags:
-  - 模拟电路
+  - 前端
 categories:
-  - 电子电路
+  - Electron
 hiddenFromHomePage: false
 hiddenFromSearch: false
-summary:
+slug: "snows"
+summary: "hahahahhahah"
 resources:
   - name: featured-image
     src: featured-image.jpg
@@ -36,9 +37,7 @@ repost:
 
 # See details front matter: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter
 ---
-# 整流电路
 
-## 概述
+<!--more-->
 
-- 整流电路的功能是将交流电转换成直流电.整流电路主要有{{<spoiler>}}半波整流电路、全波整流电路、桥式整流电路和倍压整流电路{{</spoiler>}}等
-- 
+

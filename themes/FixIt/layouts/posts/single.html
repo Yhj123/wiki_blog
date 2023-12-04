@@ -160,7 +160,7 @@
     {{- end -}}
 
     {{- /* Static TOC */ -}}
-    {{- if (ne $toc.enable false) | and (ne $tocEmpty true) -}}
+    {{- if (ne $toc.enable false) | and (ne $tocEmpty true) -}} 
       <div class="details toc{{ with $params.password }} d-none{{ end }}" id="toc-static" data-kept="{{ if $toc.keepStatic }}true{{ else }}false{{ end }}">
         <div class="details-summary toc-title">
           <span>{{ T "single.contents" }}</span>
@@ -184,6 +184,7 @@
         (substr $base64EncodeContent $saltLen)
       -}}
     {{- end -}}
+
     <div class="content" id="content"
       {{- with $params.endFlag }} data-end-flag="{{ . }}"{{- end -}}
       {{- with $params.password }} data-password="{{ md5 . }}"{{- end -}}
@@ -197,6 +198,28 @@
         {{- partial "single/fixit-decryptor.html" . -}}
       {{- end -}}
     </div>
+
+    {{- /* AI 摘要 
+    <!-- 获取数据 -->
+    {{ $summary := getJSON "data/summary/summary.json" }}
+    <!-- 以 slug 作为锚点来对应文章与摘要 -->
+    {{ $currentSummary := .Params.summary}}
+    {{ $currentTitle := .Params.title }}
+    {{ $matchingSummary := index (where $summary.summaries "title" $currentTitle) 0 }}
+    <div class="post-ai">
+      <div class="ai-title">
+        <i class="fas fa-robot ai-title-icon"></i>
+        <div class="ai-title-text">摘要</div>
+      </div>
+      <div class="ai-explanation">
+        {{ if $matchingSummary.summary }}
+          {{ $matchingSummary.summary }}
+        {{ else }}
+          {{ $currentSummary }}
+        {{ end }}
+      </div>
+    </div>
+    */ -}}
 
     {{- /* Footer and Reward */ -}}
     {{- $reward := .Scratch.Get "reward" -}}

@@ -49,4 +49,6 @@ theme = "FixIt"
     lineNos = true
     lineNumbersInTable = true
     tabWidth = 4
-    style = 'solarized-light'  
+    style = 'solarized-light'
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
